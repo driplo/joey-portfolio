@@ -44,7 +44,6 @@ $(document).ready(function() {
 
 	function GetCurrentPage(){
 		currentPage = parseInt($('.pt-trigger.selected').attr('data-goto'));
-		console.log(currentPage);
 	}
 
 	$('.pagination ul li').on('click', function () {

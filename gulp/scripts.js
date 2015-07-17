@@ -18,21 +18,6 @@ exports.paths = [
   'bower_components/angular-route/angular-route.min.js'
 ];
 
-
-
-/*gulp.task('jslint', function() {
- gulp.src(['pilote/src/js/*.js']).pipe(jslint({
-
-            node: true,
-            evil: true,
-            nomen: true,
-            reporter: 'default'
-        }))
-        .on('error', function (error) {
-            console.error(String(error));
-        });
-});
-*/
 gulp.task('vendors', function() {
   gulp.src(exports.paths)
     .pipe(sourcemaps.init())
@@ -50,8 +35,8 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('pilote/public/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('pilote/public/js'))
-/*    .pipe(uglify())
-    .pipe(gulp.dest('pilote/public/js'))*/
+    .pipe(uglify())
+    .pipe(gulp.dest('pilote/public/js'))
 });
 
 

@@ -11,6 +11,7 @@ exports.paths = [
   //'bower_components/bootstrap/dist/css/bootstrap.css',
   'bower_components/normalize.css/normalize.css',
   'bower_components/transition.js/css/transition-animations.css',
+  
   //'bower_components/fontawesome/css/font-awesome.min.css',
   'pilote/src/less/variables.less',
   'pilote/src/less/main.less',
