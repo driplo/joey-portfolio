@@ -14,8 +14,6 @@ exports.paths = [
   'bower_components/bootstrap/dist/js/bootstrap.js',
   'bower_components/transition.js/js/transition.js',
   'bower_components/jquery-mousewheel/jquery.mousewheel.min.js',
-  'bower_components/angular/angular.min.js',
-  'bower_components/angular-route/angular-route.min.js'
 ];
 
 gulp.task('vendors', function() {
@@ -35,8 +33,8 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('pilote/public/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('pilote/public/js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('pilote/public/js'))
+    /*.pipe(uglify())
+    .pipe(gulp.dest('pilote/public/js'))*/
 });
 
 

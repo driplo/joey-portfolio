@@ -10,5 +10,5 @@ gulp.task('watch', function() {
   gulp.watch('pilote/src/images/*', ['images']);
   /*gulp.watch('pilote/src/js/*.js', ['jslint']);*/
   gulp.watch('pilote/src/js/**/*.js', ['scripts']);
-  gulp.watch('*.html', ['w3cjs']);
+  gulp.watch('pilote/src/*.html', ['w3cjs']);
 });
