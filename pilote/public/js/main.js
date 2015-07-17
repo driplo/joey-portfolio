@@ -52,4 +52,24 @@ $(document).ready(function() {
 	    GetCurrentPage();
 	});
 
+	 $(".animsition").animsition({
+	  
+	    inClass               :   'fade-in-left-sm',
+	    outClass              :   'fade-out-right-sm',
+	    inDuration            :    500,
+	    outDuration           :    500,
+	    linkElement           :   '.animsition-link',
+	    // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
+	    loading               :    true,
+	    loadingParentElement  :   'body', //animsition wrapper element
+	    loadingClass          :   'animsition-loading',
+	    unSupportCss          : [ 'animation-duration',
+	                              '-webkit-animation-duration',
+	                              '-o-animation-duration'
+	                            ],
+	    overlay               :   false,
+	    overlayClass          :   'animsition-overlay-slide',
+	    overlayParentElement  :   'body'
+	  });
+
 });
