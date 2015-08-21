@@ -8,5 +8,6 @@ gulp.task('default', [
   'scripts',
   'fonts',
   /*'jslint',*/
-  'w3cjs'
+  'home',
+  'projects'
 ]);

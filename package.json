@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gulp-concat": "^2.6.0",
+    "gulp-headerfooter": "^1.0.3",
     "gulp-jslint": "^0.2.2",
     "imagemin-pngquant": "^4.1.0",
     "require-dir": "^0.3.0"
