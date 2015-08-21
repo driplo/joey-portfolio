@@ -59,7 +59,15 @@ h2{
 	height:250px;
 	font-family: 'Asap', sans-serif;
 	visibility: hidden;
-	transition: all 0.25s;
+	transition: all 0.25s ease-in-out;
+	position:relative;
+	z-index: 1;
+	top:-250px;
+
+	&.visible{
+		top:0;
+		transition:top 0.25s ease-in-out;
+	}
 
 	h2
 	{
@@ -264,5 +272,5 @@ h2{
 .main.deployed{
 	top:250px;
 	opacity:0.5;
-	cursor:url(../images/cursor.png), auto;
+	cursor:url(../images/close.png), auto;
 }
