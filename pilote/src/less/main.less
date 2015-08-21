@@ -162,6 +162,7 @@ h2{
 		transform: translate3d(0, 0, 0);
 	 	transform-style: preserve-3d;
 	 	backface-visibility: hidden;
+		transform: scale(1.05);
  	}
 
  	.pt-page-current{
@@ -177,9 +178,10 @@ h2{
 		}
 
 		box-sizing:border-box;
-		position: relative;
+		position: absolute;
 	    top: 50%;
-	    transform: translateY(-50%);
+	    transform: translate(-50%, -50%);
+			left: 50%;
 	    width:320px;
 	    border:@gold 5px solid;
 	    margin:0 auto;

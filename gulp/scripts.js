@@ -14,7 +14,9 @@ exports.paths = [
   'bower_components/bootstrap/dist/js/bootstrap.js',
   'bower_components/transition.js/js/transition.js',
   'bower_components/jquery-mousewheel/jquery.mousewheel.min.js',
-  'bower_components/animsition/dist/js/jquery.animsition.min.js'
+  'bower_components/animsition/dist/js/jquery.animsition.min.js',
+  'pilote/src/js/jquery.interactive_bg.min.js'
+
 ];
 
 gulp.task('vendors', function() {
@@ -37,5 +39,3 @@ gulp.task('scripts', function() {
     /*.pipe(uglify())
     .pipe(gulp.dest('pilote/public/js'))*/
 });
-
-

@@ -38,12 +38,15 @@ $(document).ready(function() {
 			$('.main').addClass('deployed');
 			$(this).addClass('hide');
 			$('#apropos').addClass('visible');
+			$('.pt-page').css('transform', 'scale(1)');
+			$('.menu').removeClass('.bg');
 		});
 
 		$('body').on('click', '.deployed', function() {
 			$('.main').removeClass('deployed');
 			$('#apropos').removeClass('visible');
 			$('.menu').removeClass('hide');
+			$('.pt-page').css('transform', 'scale(1.05)');
 		});
 
 	// function showAbout(){
@@ -84,5 +87,13 @@ $(document).ready(function() {
 	    overlayClass          :   'animsition-overlay-slide',
 	    overlayParentElement  :   'body'
 	  });
+
+		$(".bg").interactive_bg({
+	   strength: 25,
+	   scale: 1,
+	   animationSpeed: "100ms",
+	   contain: true,
+	   wrapContent: false
+	 });
 
 });
