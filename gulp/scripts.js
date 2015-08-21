@@ -13,6 +13,7 @@ exports.paths = [
   'bower_components/transition.js/js/transition.js',
   'bower_components/jquery-mousewheel/jquery.mousewheel.min.js',
   'bower_components/animsition/dist/js/jquery.animsition.min.js',
+  'bower_components/lazyloadxt/dist/jquery.lazyloadxt.js',
   'pilote/src/js/jquery.interactive_bg.min.js'
 ];
 

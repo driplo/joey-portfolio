@@ -1,4 +1,9 @@
+$.lazyLoadXT.scrollContainer = '.project';
+$.lazyLoadXT.onload.addClass = 'animated slideInUp';
+
 $(document).ready(function() {
+
+ $(window).lazyLoadXT();
 
 	var currentPage = 1;
 
