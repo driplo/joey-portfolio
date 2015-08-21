@@ -1,4 +1,5 @@
 @import "variables.less";
+@import "fonts.less";
 
 body, html{
 	width:100%;
@@ -6,6 +7,11 @@ body, html{
 	overflow:hidden;
 	color:@darkgrey;
 	background:@darkgrey;
+}
+
+.hide{
+	opacity:0!important;
+	transition: opacity .25s ease-in-out;
 }
 
 .pull-right{
@@ -53,6 +59,7 @@ body, html{
 		column-count: 2;
 		column-gap:50px;
 		text-align:justify;
+		overflow:hidden;
 	}
 
 	.links{
@@ -69,10 +76,42 @@ body, html{
 			background:#fff;
 			color:@darkgrey;
 			padding:15px;
-			width:220px;
+			width:40%;
 			text-align: center;
 			display:inline-block;
 		}
+	}
+
+}
+
+.menu{
+	cursor:pointer;
+	position:absolute;
+	top:50px;
+	left:50px;
+	width:300px;
+	z-index:2;
+	opacity:1;
+	transition: opacity .25s ease-in-out;
+
+	.logo{
+		background: url(../images/logo-sm.png) no-repeat top left;
+		height:50px;
+		width:50px;
+		float:left;
+		padding-right:25px;
+	}
+
+	.menu-link{
+		text-transform:uppercase;
+		font-family: 'Asap', sans-serif;
+		color:@white;
+		font-weight:bold;
+		font-size:14pt;
+		float:left;
+		line-height:50px;
+		padding-left:25px;
+		border-left:1px solid fade(@white, 50%);
 	}
 
 }
@@ -108,35 +147,6 @@ body, html{
  		visibility: visible;
  	}
 
-	.menu{
-		cursor:pointer;
-		position:absolute;
-		top:50px;
-		left:50px;
-		width:300px;
-		z-index:2;
-
-		.logo{
-			background: url(../images/logo-sm.png) no-repeat top left;
-			height:50px;
-			width:50px;
-			float:left;
-			padding-right:25px;
-		}
-
-		.menu-link{
-			text-transform:uppercase;
-			font-family: 'Asap', sans-serif;
-			color:@white;
-			font-weight:bold;
-			font-size:14pt;
-			float:left;
-			line-height:50px;
-			padding-left:25px;
-			border-left:1px solid fade(@white, 50%);
-		}
-
-	}
 
 	.project-square
 	{
@@ -155,7 +165,7 @@ body, html{
 	    padding:50px;
 
 	    .project-nb{
-	    	font-family:Glamor;
+	    	font-family:'Glamor';
 	    	color:@white;
 	    	font-size:58px;
 	    	border-bottom:4px solid @gold;
@@ -173,7 +183,7 @@ body, html{
 
 	    .project-date{
 	    	margin-top:15px;
-	    	font-family:Glamor;
+	    	font-family:'Glamor';
 	    	font-weight: lighter;
 	    	text-transform: uppercase;
 	    	color:@white;
@@ -200,7 +210,7 @@ body, html{
 			{
 				display:inline;
 				a{
-					font-family:Glamor;
+					font-family:'Glamor';
 	    			font-weight: lighter;
 	    			color:@white;
 	    			text-decoration: none;
