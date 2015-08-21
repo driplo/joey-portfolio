@@ -1,0 +1,55 @@
+/****PROJET*****/
+.project{
+  width:~'calc(100% - 340px)';
+  box-sizing: border-box;
+  overflow-y:auto;
+  height:100%;
+  padding:50px;
+}
+
+
+/*****PANEL******/
+.side-panel{
+  position:fixed;
+  top:0;
+  bottom:0;
+  box-sizing: border-box;
+  right:0;
+  width:340px;
+  background-color: #fff;
+
+  .inner-panel{
+    position:absolute;
+    top:50%;
+    // transform: translateY(-50%);
+    padding:0 40px 40px 40px;
+    margin-top:-50px;
+    p:first-child{
+      margin-top:50px;
+    }
+  }
+}
+
+.close-panel{
+  float:right;
+  margin:40px;
+}
+
+.buttons{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  box-sizing: border-box;
+
+  .btn{
+    width:50%;
+    box-sizing: border-box;
+    padding:15px 0;
+    text-align: center;
+    background-color: @darkgrey;
+    float:left;
+    color:#fff;
+    border-right:1px solid #fff;
+  }
+
+}

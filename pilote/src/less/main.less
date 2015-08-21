@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "fonts.less";
+@import "project.less";
 
 body, html{
 	width:100%;
@@ -7,12 +8,32 @@ body, html{
 	overflow:hidden;
 	color:@darkgrey;
 	background:@lightgrey;
+	font-family: 'Asap', sans-serif;
 }
 
 .hide{
 	opacity:0!important;
 	transition: opacity .25s ease-in-out;
 }
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+h2{
+	text-transform: uppercase;
+	font-size: 30px;
+	border-bottom: 4px solid #c3a263;
+	padding-bottom:15px;
+
+	.subtitle{
+		font-size:smaller;
+		text-transform: none;
+		font-weight: lighter;
+	}
+
+}
+
 
 .pull-right{
 	float:right;
