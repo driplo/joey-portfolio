@@ -46,14 +46,6 @@ $(document).ready(function() {
 			$('.menu').removeClass('hide');
 		});
 
-	// function showAbout(){
-	// 	$(".main").toggleClass("deployed");
-	// 	$("#apropos").toggleClass("visible");
-	// }
-	//
-	// $('.menu').on('click', function () {
-	// 	showAbout();
-	// });
 
 	function GetCurrentPage(){
 		currentPage = parseInt($('.pt-trigger.selected').attr('data-goto'));

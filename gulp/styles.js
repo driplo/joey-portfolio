@@ -13,6 +13,7 @@ exports.paths = [
   'bower_components/transition.js/css/transition-animations.css',
   //'bower_components/fontawesome/css/font-awesome.min.css',
   'bower_components/animsition/dist/css/animsition.min.css',
+  'bower_components/animate.css/animate.min.css',
   'pilote/src/less/variables.less',
   'pilote/src/less/main.less',
 ];

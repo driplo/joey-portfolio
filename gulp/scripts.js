@@ -5,8 +5,6 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
     jslint = require('gulp-jslint'),
-    //merge2 = require('merge2'),
-    //template = require('gulp-template-compile'),
     htmlmin = require('gulp-htmlmin');
 
 exports.paths = [
@@ -16,7 +14,6 @@ exports.paths = [
   'bower_components/jquery-mousewheel/jquery.mousewheel.min.js',
   'bower_components/animsition/dist/js/jquery.animsition.min.js',
   'pilote/src/js/jquery.interactive_bg.min.js'
-
 ];
 
 gulp.task('vendors', function() {
@@ -36,6 +33,4 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('pilote/public/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('pilote/public/js'))
-    /*.pipe(uglify())
-    .pipe(gulp.dest('pilote/public/js'))*/
 });
