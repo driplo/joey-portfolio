@@ -14,12 +14,24 @@ $(document).ready(function() {
 	         GetCurrentPage();
 	         currentPage++;
 	         $('.pagination ul li').eq(currentPage).trigger('click');
+           if (currentPage > 10){
+              $('.js-pj-nb').text(currentPage);
+           }
+           else{
+              $('.js-pj-nb').text('0'+currentPage);
+           }
 	    }
 	    else if (delta > 0){
 	         // $("#prevpage").trigger("click");
 	         GetCurrentPage();
 	         currentPage--;
 	         $('.pagination ul li').eq(currentPage).trigger('click');
+           if (currentPage > 10){
+              $('.js-pj-nb').text(currentPage);
+           }
+           else{
+              $('.js-pj-nb').text('0'+currentPage);
+           }
 	    }
 	 });
 	// Arrow Keys
@@ -29,12 +41,24 @@ $(document).ready(function() {
 	        GetCurrentPage();
 	        currentPage--;
 	        $('.pagination ul li').eq(currentPage).trigger('click');
+          if (currentPage > 10){
+             $('.js-pj-nb').text(currentPage);
+          }
+          else{
+             $('.js-pj-nb').text('0'+currentPage);
+          }
 	   }
 	   else if(e.keyCode == 39) { // right
 	        // $("#nextpage").trigger("click");
 	        GetCurrentPage();
 	        currentPage++;
 	        $('.pagination ul li').eq(currentPage).trigger('click');
+          if (currentPage > 10){
+             $('.js-pj-nb').text(currentPage);
+          }
+          else{
+             $('.js-pj-nb').text('0'+currentPage);
+          }
 	   }
 		});
 
