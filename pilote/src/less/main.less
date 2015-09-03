@@ -20,6 +20,13 @@ body, html{
   width: 100%;
 }
 
+.bande{
+	width:45px;
+	height:5px;
+	background-color:@gold;
+	margin-bottom: 50px;
+}
+
 .hide{
 	opacity:0!important;
 	transition: opacity .25s ease-in-out;
@@ -86,19 +93,19 @@ h2{
 	{
 		text-transform:uppercase;
 		font-size:30px;
-		border-bottom:4px solid @gold;
+		border-bottom:0;
 		margin:0;
 		display: inline-block;
-		padding-bottom:15px;
-		margin-bottom:25px;
+		padding-bottom:20px;
 	}
 
 	.aboutme{
 		padding:50px;
 		flex:5 0px;
 		order:1;
-		background: @white;
+		background-color: @white;
 		column-count: 2;
+		font-size: 14px;
 		column-gap:50px;
 		text-align:justify;
 		overflow:hidden;
@@ -109,6 +116,7 @@ h2{
 		flex:3 0px;
 		order:2;
 		background:@darkgrey;
+		text-transform: uppercase;
 
 		h2{
 			color:@white;
@@ -118,9 +126,30 @@ h2{
 			background:#fff;
 			color:@darkgrey;
 			padding:15px;
-			width:40%;
+			width:180px;
 			text-align: center;
 			display:inline-block;
+			margin:0;
+			font-size: 14px;
+			transition: all .25s ease-in;
+
+			&:hover{
+				background-color: @gold;
+				color:#fff;
+			}
+
+			&.marg{
+				margin-right: 20px;
+			}
+
+			@media (max-width: 1400px) {
+      	width:150px;
+    	}
+
+			@media (max-width: 1250px) {
+      	width:120px;
+    	}
+
 		}
 	}
 
@@ -185,6 +214,10 @@ h2{
 		transform: scale(1.05);
  	}
 
+	.bande{
+		margin:0 auto;
+	}
+
  	.pt-page-current{
  		visibility: visible;
  	}
@@ -198,13 +231,6 @@ h2{
 		width: 765px;
 		padding: 0;
 		margin:0;
-	}
-
-	.bande{
-		width:45px;
-		height:5px;
-		background-color:@gold;
-		margin:0 auto;
 	}
 
   .project-title{
@@ -241,51 +267,18 @@ h2{
 		font-family: 'Asap', sans-serif;
 		font-weight: bold;
 	}
+}
 
-	// .pagination{
-	//
-	// 	margin:0 auto;
-	// 	width:100%;
-	// 	text-align: center;
-	// 	position:absolute;
-	// 	bottom:50px;
-	// 	z-index:2;
-	//
-	// 	ul{
-	// 		margin:0 auto;
-	// 		list-style-type: none;
-	// 		padding:0;
-	//
-	// 		li
-	// 		{
-	// 			display:inline;
-	// 			a{
-	// 				font-family:'Glamor';
-	//     			font-weight: lighter;
-	//     			color:@white;
-	//     			text-decoration: none;
-	//     			border:1px solid @white;
-	//     			padding:5px 10px;
-	//     			margin-left: -5px;
-	//     			position:relative;
-	//     			overflow:hidden;
-	//     			transition:0.08s ease-in;
-	// 			}
-	//
-	// 		}
-	//
-	// 		li.selected a{
-	// 			background:@white;
-	// 			color:@darkgrey;
-	// 		}
-	//
-	// 		li:first-child>a{
-	// 			margin-left:0;
-	// 		}
-	// 	}
-	//
-	// }
+@media screen and (max-width: 1300px){
+  .hide-on-small{
+		display: none;
+	}
+}
 
+@media screen and (max-width: 1500px){
+  .hide-on-small{
+		font-size: smaller;
+	}
 }
 
 .main.deployed{
