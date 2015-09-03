@@ -13,6 +13,11 @@
 
 }
 
+
+.desc{
+  text-align: justify;
+}
+
 /*****PANEL******/
 .side-panel{
   position:fixed;
@@ -40,6 +45,15 @@
 .close-panel{
   float:right;
   margin:40px;
+
+
+  img{
+    transition:all 0.25s ease-in-out;
+    &:hover{
+       transform:scale(0.7,0.7) rotate(180deg);
+    }
+
+  }
 }
 
 .buttons{
@@ -47,6 +61,7 @@
   bottom:0;
   width:100%;
   box-sizing: border-box;
+  padding:25px;
 
   .btn{
     width:50%;
@@ -57,6 +72,20 @@
     float:left;
     color:#fff;
     border-right:1px solid #fff;
+    transition:all 0.25s ease-in-out;
+    font-size:14px;
+
+    &.disabled{
+      background-color: #eee;
+      &:hover{
+        background-color: #eee;
+      }
+    }
+
+    &:hover{
+      background-color: @gold;
+      color:#fff;
+    }
   }
 
 }
