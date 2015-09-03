@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	// Mouse Scroll
 	$('body').mousewheel(function(event, delta) {
-	    if (delta < 0 ){
+	    if (delta > 0 ){
         console.log(currentPage);
         if (currentPage == 1){
           $('.pagination ul li').eq(9).trigger('click');
@@ -22,7 +22,7 @@ $(document).ready(function() {
           $('.js-pj-nb').text('0'+currentPage);
         }
 	    }
-	    else if (delta > 0){
+	    else if (delta < 0){
         GetCurrentPage();
         if (currentPage == 9){
           $('.pagination ul li').eq(1).trigger('click');
