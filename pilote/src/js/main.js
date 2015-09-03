@@ -10,54 +10,56 @@ $(document).ready(function() {
 	// Mouse Scroll
 	$('body').mousewheel(function(event, delta) {
 	    if (delta < 0 ){
-	         // $("#nextpage").trigger("click");
-	         GetCurrentPage();
-	         currentPage++;
-	         $('.pagination ul li').eq(currentPage).trigger('click');
-           if (currentPage > 10){
-              $('.js-pj-nb').text(currentPage);
-           }
-           else{
-              $('.js-pj-nb').text('0'+currentPage);
-           }
+        console.log(currentPage);
+        if (currentPage == 1){
+          $('.pagination ul li').eq(9).trigger('click');
+          $('.js-pj-nb').text('0'+currentPage);
+        }
+        else{
+          GetCurrentPage();
+         currentPage--;
+         $('.pagination ul li').eq(currentPage).trigger('click');
+          $('.js-pj-nb').text('0'+currentPage);
+        }
 	    }
 	    else if (delta > 0){
-	         // $("#prevpage").trigger("click");
-	         GetCurrentPage();
-	         currentPage--;
-	         $('.pagination ul li').eq(currentPage).trigger('click');
-           if (currentPage > 10){
-              $('.js-pj-nb').text(currentPage);
-           }
-           else{
-              $('.js-pj-nb').text('0'+currentPage);
-           }
+        GetCurrentPage();
+        if (currentPage == 9){
+          $('.pagination ul li').eq(1).trigger('click');
+          $('.js-pj-nb').text('0'+currentPage);
+        }
+        else{
+          currentPage++;
+         $('.pagination ul li').eq(currentPage).trigger('click');
+          $('.js-pj-nb').text('0'+currentPage);
+        }
 	    }
 	 });
 	// Arrow Keys
 	$("body").keydown(function(e) {
 	   if(e.keyCode == 37) { // left
-	        // $("#prevpage").trigger("click");
-	        GetCurrentPage();
-	        currentPage--;
-	        $('.pagination ul li').eq(currentPage).trigger('click');
-          if (currentPage > 10){
-             $('.js-pj-nb').text(currentPage);
+          console.log(currentPage);
+          if (currentPage == 1){
+            $('.pagination ul li').eq(9).trigger('click');
+            $('.js-pj-nb').text('0'+currentPage);
           }
           else{
-             $('.js-pj-nb').text('0'+currentPage);
+            GetCurrentPage();
+  	        currentPage--;
+  	        $('.pagination ul li').eq(currentPage).trigger('click');
+            $('.js-pj-nb').text('0'+currentPage);
           }
 	   }
 	   else if(e.keyCode == 39) { // right
-	        // $("#nextpage").trigger("click");
 	        GetCurrentPage();
-	        currentPage++;
-	        $('.pagination ul li').eq(currentPage).trigger('click');
-          if (currentPage > 10){
-             $('.js-pj-nb').text(currentPage);
+          if (currentPage == 9){
+            $('.pagination ul li').eq(1).trigger('click');
+            $('.js-pj-nb').text('0'+currentPage);
           }
           else{
-             $('.js-pj-nb').text('0'+currentPage);
+            currentPage++;
+  	        $('.pagination ul li').eq(currentPage).trigger('click');
+            $('.js-pj-nb').text('0'+currentPage);
           }
 	   }
 		});
