@@ -9,6 +9,7 @@ $(document).ready(function() {
 
 	// Mouse Scroll
 	$('body').mousewheel(function(event, delta) {
+     $('.navhelp').addClass('hide');
 	    if (delta > 0 ){
         console.log(currentPage);
         if (currentPage == 1){
@@ -37,6 +38,7 @@ $(document).ready(function() {
 	 });
 	// Arrow Keys
 	$("body").keydown(function(e) {
+     $('.navhelp').addClass('hide');
 	   if(e.keyCode == 37) { // left
           console.log(currentPage);
           if (currentPage == 1){
@@ -115,5 +117,6 @@ $(document).ready(function() {
 	   contain: true,
 	   wrapContent: false
 	 });
+
 
 });
